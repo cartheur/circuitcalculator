@@ -1,0 +1,12 @@
+The following is a design tool which calculates the inductance of an air core inductor. 
+
+L= (d^2 * n^2)/(18d+40l)
+
+where:
+
+L is inductance in micro Henrys,
+d is coil diameter in inches,
+l  is coil length in inches, and
+n is number of turns.
+
+http://www.daycounter.com/Calculators/Air-Core-Inductor-Calculator.phtml
