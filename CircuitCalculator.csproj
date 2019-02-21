@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{435EFB62-470B-4BF4-8448-1A347A4D7C5B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CircuitCalculator</RootNamespace>
+    <AssemblyName>CircuitCalculator</AssemblyName>
+    <ApplicationIcon>running_man.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="alglibnet2, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="MatrixLibrary, Version=1.1.2.26403, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalculusForms\IntegrationCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalculusForms\IntegrationCalculator.Designer.cs">
+      <DependentUpon>IntegrationCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calculus\Differentiation.cs" />
+    <Compile Include="Calculus\EllipticInegral.cs" />
+    <Compile Include="Calculus\Integration.cs" />
+    <Compile Include="Calculus\LineIntegral.cs" />
+    <Compile Include="Calculus\SimpsonIntegrator.cs" />
+    <Compile Include="Classes\Calculus\SimpsonIntegrator.cs" />
+    <Compile Include="Classes\Color\ColorHsl.cs" />
+    <Compile Include="Classes\Color\ColorHsv.cs" />
+    <Compile Include="Classes\Color\ColorRgb.cs" />
+    <Compile Include="Classes\Color\ColorSchema.cs" />
+    <Compile Include="Numbers\Complex.cs" />
+    <Compile Include="Classes\Calculus\Differentiator.cs" />
+    <Compile Include="Numbers\Constants.cs" />
+    <Compile Include="Classes\ExcelReader.cs" />
+    <Compile Include="Classes\FunctionCompiler.cs" />
+    <Compile Include="Classes\Calculus\Integrator.cs" />
+    <Compile Include="Classes\Investor.cs" />
+    <Compile Include="Classes\RepeatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Classes\SQLiteDatabase.cs" />
+    <Compile Include="Classes\Calculus\Runge-Kutta.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calculus\Simpson.cs" />
+    <Compile Include="Classes\Surface3DRenderer.cs" />
+    <Compile Include="Numbers\Vector3.cs" />
+    <Compile Include="Drawing\Drawing3D\Camera.cs" />
+    <Compile Include="Drawing\Drawing3D\Cuboid.cs" />
+    <Compile Include="Drawing\Drawing3D\Point3D.cs" />
+    <Compile Include="Drawing\Drawing3D\Quaternion.cs" />
+    <Compile Include="Drawing\Drawing3D\Shape3D.cs" />
+    <Compile Include="Drawing\Drawing3D\Vector3D.cs" />
+    <Compile Include="Drawing\Geometry\Vector.cs" />
+    <Compile Include="Drawing\Imaging\Filters\FreeTransform.cs" />
+    <Compile Include="Drawing\Imaging\ImageData.cs" />
+    <Compile Include="DataForms\StoreCalculationData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataForms\StoreCalculationData.Designer.cs">
+      <DependentUpon>StoreCalculationData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataForms\StoreExperimentalData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataForms\StoreExperimentalData.Designer.cs">
+      <DependentUpon>StoreExperimentalData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataForms\StorePhysicalElectricalMachineData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataForms\StorePhysicalElectricalMachineData.Designer.cs">
+      <DependentUpon>StorePhysicalElectricalMachineData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AirCoreInductanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AirCoreInductanceCalculator.Designer.cs">
+      <DependentUpon>AirCoreInductanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnergyPowerCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EnergyPowerCalculator.Designer.cs">
+      <DependentUpon>EnergyPowerCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QualityFactorCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QualityFactorCalculator.Designer.cs">
+      <DependentUpon>QualityFactorCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CouplingCoefficientCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CouplingCoefficientCalculator.Designer.cs">
+      <DependentUpon>CouplingCoefficientCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EfficiencyCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EfficiencyCalculator.Designer.cs">
+      <DependentUpon>EfficiencyCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImpedanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImpedanceCalculator.Designer.cs">
+      <DependentUpon>ImpedanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InductanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InductanceCalculator.Designer.cs">
+      <DependentUpon>InductanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MagneticFieldCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MagneticFieldCalculator.Designer.cs">
+      <DependentUpon>MagneticFieldCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MagneticFieldCoilRotationCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MagneticFieldCoilRotationCalculator.Designer.cs">
+      <DependentUpon>MagneticFieldCoilRotationCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatrixCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatrixCalculator.Designer.cs">
+      <DependentUpon>MatrixCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FieldsRadiativeCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FieldsRadiativeCalculator.Designer.cs">
+      <DependentUpon>FieldsRadiativeCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RatioPowerCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RatioPowerCalculator.Designer.cs">
+      <DependentUpon>RatioPowerCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VectorExpressionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VectorExpressionForm.Designer.cs">
+      <DependentUpon>VectorExpressionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VectorPotentialCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\VectorPotentialCalculator.Designer.cs">
+      <DependentUpon>VectorPotentialCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\ProjectDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\ProjectDataForm.Designer.cs">
+      <DependentUpon>ProjectDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AntennaAperture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AntennaAperture.Designer.cs">
+      <DependentUpon>AntennaAperture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\AlphaReferenceTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\AlphaReferenceTable.Designer.cs">
+      <DependentUpon>AlphaReferenceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\MatrixViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\MatrixViewer.Designer.cs">
+      <DependentUpon>MatrixViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MutualInductanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MutualInductanceCalculator.Designer.cs">
+      <DependentUpon>MutualInductanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NoteTextPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NoteTextPanel.Designer.cs">
+      <DependentUpon>NoteTextPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlotDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlotDataForm.Designer.cs">
+      <DependentUpon>PlotDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrototypeDataPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrototypeDataPanel.Designer.cs">
+      <DependentUpon>PrototypeDataPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RCNetworkCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RCNetworkCalculator.Designer.cs">
+      <DependentUpon>RCNetworkCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResistiveRadiativeLossesCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResistiveRadiativeLossesCalculator.Designer.cs">
+      <DependentUpon>ResistiveRadiativeLossesCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResonanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResonanceCalculator.Designer.cs">
+      <DependentUpon>ResonanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RLCNetworkCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RLCNetworkCalculator.Designer.cs">
+      <DependentUpon>RLCNetworkCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SpiralInductanceCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SpiralInductanceCalculator.Designer.cs">
+      <DependentUpon>SpiralInductanceCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\CartheurDocumentsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\CartheurDocumentsList.Designer.cs">
+      <DependentUpon>CartheurDocumentsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OtherForms\InvestorInteractionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OtherForms\InvestorInteractionForm.Designer.cs">
+      <DependentUpon>InvestorInteractionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationFive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationFive.Designer.cs">
+      <DependentUpon>EquationFive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationFour.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationFour.Designer.cs">
+      <DependentUpon>EquationFour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationOne.Designer.cs">
+      <DependentUpon>EquationOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationTwoThree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Proofing\EquationTwoThree.Designer.cs">
+      <DependentUpon>EquationTwoThree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\PythagoreanCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\PythagoreanCalculator.Designer.cs">
+      <DependentUpon>PythagoreanCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\TableSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\TableSelectDialog.Designer.cs">
+      <DependentUpon>TableSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CalculusForms\IntegrationCalculator.resx">
+      <DependentUpon>IntegrationCalculator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataForms\StoreCalculationData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StoreCalculationData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataForms\StoreExperimentalData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StoreExperimentalData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataForms\StorePhysicalElectricalMachineData.resx">
+      <DependentUpon>StorePhysicalElectricalMachineData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AirCoreInductanceCalculator.resx">
+      <DependentUpon>AirCoreInductanceCalculator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnergyPowerCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnergyPowerCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QualityFactorCalculator.resx">
+      <DependentUpon>QualityFactorCalculator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CouplingCoefficientCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CouplingCoefficientCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EfficiencyCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EfficiencyCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImpedanceCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ImpedanceCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InductanceCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InductanceCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MagneticFieldCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MagneticFieldCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MagneticFieldCoilRotationCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MagneticFieldCoilRotationCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatrixCalculator.resx">
+      <DependentUpon>MatrixCalculator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FieldsRadiativeCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FieldsRadiativeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RatioPowerCalculator.resx">
+      <DependentUpon>RatioPowerCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VectorExpressionForm.resx">
+      <DependentUpon>VectorExpressionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\VectorPotentialCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>VectorPotentialCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\ProjectDataForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ProjectDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AntennaAperture.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AntennaAperture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\AlphaReferenceTable.resx">
+      <DependentUpon>AlphaReferenceTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\MatrixViewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MatrixViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MutualInductanceCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MutualInductanceCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NoteTextPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NoteTextPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlotDataForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PlotDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrototypeDataPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PrototypeDataPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RCNetworkCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RCNetworkCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResistiveRadiativeLossesCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResistiveRadiativeLossesCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResonanceCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResonanceCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RLCNetworkCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RLCNetworkCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SpiralInductanceCalculator.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SpiralInductanceCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\CartheurDocumentsList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CartheurDocumentsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherForms\InvestorInteractionForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InvestorInteractionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Proofing\EquationFive.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EquationFive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Proofing\EquationFour.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EquationFour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Proofing\EquationOne.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EquationOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Proofing\EquationTwoThree.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EquationTwoThree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\PythagoreanCalculator.resx">
+      <DependentUpon>PythagoreanCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\TableSelectDialog.resx">
+      <DependentUpon>TableSelectDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Bandwidth.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Bandwidth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\DifferentialFrequency.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DifferentialFrequency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\EquationValues.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EquationValues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\GeometryCircularLoop.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GeometryCircularLoop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ParallelRLC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParallelRLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\ResonanceFrequency.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ResonanceFrequency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SeriesRLC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SeriesRLC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\View3DSurface.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>View3DSurface.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="data\examples.xls" />
+    <None Include="db\machine_parameters.db" />
+    <None Include="db\parameters.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="db\prototype_data.db" />
+    <None Include="db\sessions.db" />
+    <None Include="External\Pasteboard readme.rtf" />
+    <None Include="External\Pasteboard.rtf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SubForms\Bandwidth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Bandwidth.Designer.cs">
+      <DependentUpon>Bandwidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\DifferentialFrequency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\DifferentialFrequency.Designer.cs">
+      <DependentUpon>DifferentialFrequency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\EquationValues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\EquationValues.Designer.cs">
+      <DependentUpon>EquationValues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\GeometryCircularLoop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\GeometryCircularLoop.Designer.cs">
+      <DependentUpon>GeometryCircularLoop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ParallelRLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ParallelRLC.Designer.cs">
+      <DependentUpon>ParallelRLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\ResonanceFrequency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\ResonanceFrequency.Designer.cs">
+      <DependentUpon>ResonanceFrequency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SeriesRLC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SeriesRLC.Designer.cs">
+      <DependentUpon>SeriesRLC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\View3DSurface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\View3DSurface.Designer.cs">
+      <DependentUpon>View3DSurface.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="External\Pasteboard.exe" />
+    <Content Include="Forms\aircore.txt" />
+    <Content Include="Resources\circular_loop.gif" />
+    <Content Include="Resources\inductanceEquation.jpg" />
+    <Content Include="Resources\permeabilityConstant.jpg" />
+    <Content Include="Resources\permeabilityMaterial.jpg" />
+    <Content Include="Resources\rcResonanceEquation.jpg" />
+    <Content Include="Resources\resonanceEquation.jpg" />
+    <Content Include="running_man.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
