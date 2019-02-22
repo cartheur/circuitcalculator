@@ -8,3 +8,5 @@ This is a Windows desktop application. This project was a big help in that I was
 It can compute self-inductance and mutual inductance of loop coils, the quality of distant coils, the resonance properties of a circuit, the total circutal efficiency, the power ratio, and much more.
 
 It is about 85% complete and needs love in a few places.
+
+The bin/Debug folder which is here contains some external libraries that are used by the program.
