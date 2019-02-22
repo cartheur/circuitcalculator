@@ -5,3 +5,6 @@
 /obj/Debug
 /bin/Debug
 /.vs/CircuitCalculator/v14
+/CircuitCalculator.csproj.user
+/bin/Debug/CircuitCalculator.exe
+/bin/Debug/CircuitCalculator.pdb
