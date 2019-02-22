@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("CircuitCalculator")]
-[assembly: AssemblyDescription("Formulation of electromagnetics components.")]
+[assembly: AssemblyDescription("Computes and stores details of circuits broadcasting coupled electromagnetic energy.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Cartheur")]
 [assembly: AssemblyProduct("Circuit Calculator")]
-[assembly: AssemblyCopyright("Copyright © CTR 2010-2016")]
+[assembly: AssemblyCopyright("Copyright © CTR 2010 - 2019")]
 [assembly: AssemblyTrademark("cartheur")]
 [assembly: AssemblyCulture("")]
 
